@@ -5,11 +5,12 @@ import { Provider } from 'react-redux'
 /* Styles ======================================================================================== */
 import 'normalize.css/normalize.css'
 import './styles/styles.scss'
+import 'react-dates/initialize'
+import 'react-dates/lib/css/_datepicker.css'
 
 import AppRouter from './routers/app-router'
 import configureStore from './store/configureStore'
 import { addExpense } from './actions/expenses'
-import { setTextFilter } from './actions/filters'
 import getVisibleExpenses from './selectors/expenses'
 
 const store = configureStore()
