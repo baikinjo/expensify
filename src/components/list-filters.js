@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import 'react-dates/initialize'
 import { DateRangePicker } from 'react-dates'
 
 import {
@@ -10,7 +11,7 @@ import {
   setEndDate
 } from '../actions/filters'
 
-export class ListFilters extends React.Component {
+export class ListFilter extends React.Component {
   state = {
     calendarFocused: null
   }
@@ -21,9 +22,7 @@ export class ListFilters extends React.Component {
   }
 
   onFocusChange = calendarFocused => {
-    this.setState(() => ({
-      calendarFocused
-    }))
+    this.setState(() => ({ calendarFocused }))
   }
 
   onTextChange = e => {
@@ -59,8 +58,8 @@ export class ListFilters extends React.Component {
           showClearDates={true}
           numberOfMonths={1}
           isOutsideRange={() => false}
-          startDateId="startdate"
-          endDateId="enddate"
+          startDateId="start"
+          endDateId="end"
         />
       </div>
     )
@@ -71,15 +70,15 @@ const mapStateToProps = state => ({
   filters: state.filters
 })
 
-const mapDispatchToProps = disaptch => ({
+const mapDispatchToProps = dispatch => ({
   setTextFilter: text => dispatch(setTextFilter(text)),
-  sortByDate: () => dispatch(SortByDate()),
+  sortByDate: () => dispatch(sortByDate()),
   sortByAmount: () => dispatch(sortByAmount()),
   setStartDate: startDate => dispatch(setStartDate(startDate)),
-  setEndDate: endDate => dispatch(setStartDate(endDate))
+  setEndDate: endDate => dispatch(setEndDate(endDate))
 })
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ListFilters)
+)(ListFilter)

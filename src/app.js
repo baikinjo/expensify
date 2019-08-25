@@ -10,8 +10,6 @@ import 'react-dates/lib/css/_datepicker.css'
 
 import AppRouter from './routers/app-router'
 import configureStore from './store/configureStore'
-import { addExpense } from './actions/expenses'
-import getVisibleExpenses from './selectors/expenses'
 
 const store = configureStore()
 
