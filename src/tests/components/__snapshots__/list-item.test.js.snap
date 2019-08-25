@@ -10,9 +10,9 @@ exports[`should render list item correctly 1`] = `
     </h3>
   </Link>
   <p>
-    1203
-     - 
-    0
+    $12.03
+     -
+    Dec 31, 1969
   </p>
 </div>
 `;

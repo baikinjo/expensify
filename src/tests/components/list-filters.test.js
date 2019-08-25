@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import { DateRangePicker } from 'react-dates'
 
 import { filters, altFilters } from '../fixtures/filters'
-import { ListFilters } from '../../components/list-filters'
+import { ListFilter } from '../../components/list-filters'
 
 let setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate, wrapper
 
@@ -15,7 +15,7 @@ beforeEach(() => {
   setStartDate = jest.fn()
   setEndDate = jest.fn()
   wrapper = shallow(
-    <ListFilters
+    <ListFilter
       filters={filters}
       setTextFilter={setTextFilter}
       sortByDate={sortByDate}
