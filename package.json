@@ -46,7 +46,7 @@
     "style-loader": "^1.0.0",
     "uuid": "^3.3.3",
     "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7"
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
